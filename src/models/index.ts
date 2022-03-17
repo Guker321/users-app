@@ -1,0 +1,1 @@
+export type { UsersModel } from './usersModel';
