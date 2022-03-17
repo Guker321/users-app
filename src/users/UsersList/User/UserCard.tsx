@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { UsersModel } from '../../models';
 
 import classes from './User.module.scss';
@@ -12,6 +13,7 @@ const UserCard: React.FC<UsersModel> = (props) => {
         <p><span>город: </span>{address.city}</p>
         <p><span>компания: </span>{company.name}</p>
       </div>
+      <Link to='/' className={classes.link}>Подробнее</Link>
     </div>
   );
 };
