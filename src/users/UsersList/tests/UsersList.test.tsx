@@ -7,7 +7,7 @@ const testId = 'testingUsersList';
 
 type UsersListProps = React.ComponentProps<typeof UsersList>;
 
-const renderComponent = (props: UsersListProps = {}) => render(
+const renderComponent = (props: UsersListProps) => render(
   <UsersList
     data-testid={testId}
     {...props}

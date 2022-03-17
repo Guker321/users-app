@@ -1,14 +1,14 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import User from '../User';
+import UserCard from '../UserCard';
 
 const testId = 'testingUser';
 
-type UserProps = React.ComponentProps<typeof User>;
+type UserProps = React.ComponentProps<typeof UserCard>;
 
-const renderComponent = (props: UserProps = {}) => render(
-  <User
+const renderComponent = (props: UserProps) => render(
+  <UserCard
     data-testid={testId}
     {...props}
   />,

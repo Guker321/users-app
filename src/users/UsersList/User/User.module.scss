@@ -1,2 +1,10 @@
 .component {
+  .info {
+    & p {
+      color: #000;
+    }
+    & span {
+      color: #a3a3a3;
+    }
+  }
 }
