@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "@ff/generator": "^1.5.2",
-    "@types/lodash": "^4.14.180"
+    "@types/lodash": "^4.14.180",
+    "prettier": "^2.6.0"
   }
 }

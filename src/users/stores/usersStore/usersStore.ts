@@ -1,6 +1,6 @@
 import orderBy from 'lodash/orderBy';
 import { action, makeObservable, observable, runInAction } from 'mobx';
-import { FilterModel, UsersModel } from '../../models';
+import { UsersModel } from '../../models';
 
 import service from './usersStore.service';
 

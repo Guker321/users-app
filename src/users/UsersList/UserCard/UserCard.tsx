@@ -13,7 +13,7 @@ const UserCard: React.FC<UsersModel> = (props) => {
         <p><span>город: </span>{address.city}</p>
         <p><span>компания: </span>{company.name}</p>
       </div>
-      <Link to='/' className={classes.link}>Подробнее</Link>
+      <Link to={`/user/${id}`} className={classes.link}>Подробнее</Link>
     </div>
   );
 };

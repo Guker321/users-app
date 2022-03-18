@@ -1,1 +1,1 @@
-export type { UsersModel, FilterModel } from './usersModel';
+export type { UsersModel } from './usersModel';

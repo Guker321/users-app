@@ -1,12 +1,12 @@
 import React from 'react';
-import UsersList from '../../../users/UsersList';
+import { Outlet } from 'react-router-dom';
 import FilterBar from '../../ui/FilterBar';
 
 
 const Layout: React.FC = () => (
   <>
     <FilterBar />
-    <UsersList />
+    <Outlet />
   </>
 );
 

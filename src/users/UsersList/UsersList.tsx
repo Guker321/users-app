@@ -2,7 +2,7 @@ import React from 'react';
 import { observer } from 'mobx-react-lite';
 import Loading from '../../components/ui/Loading';
 import usersStore from '../stores/usersStore';
-import UserCard from './User/UserCard';
+import UserCard from './UserCard';
 
 import orderBy from 'lodash/orderBy';
 
