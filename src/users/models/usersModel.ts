@@ -28,4 +28,9 @@ type UsersModel = {
     company: Company;
 }
 
-export type { UsersModel };
+type FilterModel = {
+    type: 'city' | 'company'
+}
+
+
+export type { UsersModel, FilterModel };

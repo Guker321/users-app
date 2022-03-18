@@ -4,10 +4,14 @@ import Loading from '../../components/ui/Loading';
 import usersStore from '../stores/usersStore';
 import UserCard from './User/UserCard';
 
+import orderBy from 'lodash/orderBy';
+
 import styles from './UsersList.module.scss';
 
 const UsersList: React.FC = observer(() => {
   const { usersData, usersLoading, usersError} = usersStore;
+  
+  console.log(orderBy(usersData, 'name', 'asc'))
   return (
     <div className={styles.component}>
       <h2>Список пользователей</h2>

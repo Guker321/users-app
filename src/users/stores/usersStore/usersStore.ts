@@ -1,5 +1,6 @@
+import orderBy from 'lodash/orderBy';
 import { action, makeObservable, observable, runInAction } from 'mobx';
-import { UsersModel } from '../../models';
+import { FilterModel, UsersModel } from '../../models';
 
 import service from './usersStore.service';
 
@@ -16,7 +17,8 @@ class UsersStore {
       usersData: observable,
       getUsers: action,
       usersLoading: observable,
-      usersError: observable
+      usersError: observable,
+      filterUsersData: action.bound
     });
   }
 
@@ -38,6 +40,14 @@ class UsersStore {
         this.usersLoading = false;
       });
     }
+  }
+
+  filterUsersData(type: string, order: boolean) {
+    if (order === true) {
+      this.usersData = orderBy(this.usersData, type, 'asc')
+  } else {
+      this.usersData = orderBy(this.usersData, type, 'desc')
+  }
   }
 }
 
