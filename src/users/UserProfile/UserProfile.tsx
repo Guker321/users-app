@@ -5,6 +5,7 @@ import { UsersModel } from '../models';
 import usersStore from '../stores/usersStore';
 
 import classes from './UserProfile.module.scss';
+import UserForm from './UserForm';
 
 type UserProfileProps = {};
 
@@ -19,7 +20,7 @@ const UserProfile: React.FC<UserProfileProps> = observer((props) => {
 
   return (
     <div className={classes.component}>
-      UserProfile
+      <UserForm />
     </div>
   );
 });
