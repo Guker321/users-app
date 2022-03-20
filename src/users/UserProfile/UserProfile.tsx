@@ -1,28 +1,13 @@
 import React from 'react';
-import { observer } from 'mobx-react-lite';
-import { useParams } from 'react-router-dom';
-import { UsersModel } from '../models';
-import usersStore from '../stores/usersStore';
 
 import classes from './UserProfile.module.scss';
+
 import UserForm from './UserForm';
 
-type UserProfileProps = {};
-
-const UserProfile: React.FC<UserProfileProps> = observer((props) => {
-  const { id } = useParams();
-  const currentUser: UsersModel | undefined = usersStore.usersData.find(user => user.id === Number(id));
-  if (currentUser !== undefined) {
-    const { name, username, email, phone, website } = currentUser;
-    const { street, city, zipcode } = currentUser.address;
-  }
-  
-
-  return (
+const UserProfile: React.FC = () => (
     <div className={classes.component}>
       <UserForm />
     </div>
   );
-});
 
 export default UserProfile;

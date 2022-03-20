@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { UsersModel } from '../../models';
 
+
 import classes from './User.module.scss';
 
 const UserCard: React.FC<UsersModel> = (props) => {
