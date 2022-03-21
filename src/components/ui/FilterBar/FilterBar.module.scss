@@ -28,6 +28,7 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        transition: all 0.3s;
         &:hover {
           background-color: darken(#4b51ef, 25%);
         }
