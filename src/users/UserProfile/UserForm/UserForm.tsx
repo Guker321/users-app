@@ -4,13 +4,11 @@ import * as Yup from 'yup';
 
 import classes from './UserForm.module.scss';
 import { observer } from 'mobx-react-lite';
-import usersStore from '../../stores/usersStore';
 import { useParams } from 'react-router-dom';
+import usersStore from '../../stores/usersStore';
 import Loading from '../../../components/ui/Loading';
 
-type UserFormProps = {};
-
-const UserForm: React.FC<UserFormProps> = observer(() => {
+const UserForm: React.FC = observer(() => {
   const { getCurrentUser, currentUser, currentUserIsLoading, currentUserError } = usersStore;
   const params = useParams();
   const [isEditable, setIsEditable] = useState(true);
