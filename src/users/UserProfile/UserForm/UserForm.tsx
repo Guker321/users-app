@@ -66,7 +66,7 @@ const UserForm: React.FC = observer(() => {
     <label htmlFor="website">Website</label>
     <input className={formik.errors.website && classes.error} id='website' name='website' type="text" defaultValue={formik.values.website} onChange={formik.handleChange} readOnly={isEditable} />
     <label htmlFor="comment">Comment</label>
-    <textarea id='comment' name='comment' defaultValue={formik.values.comment} onChange={formik.handleChange} readOnly={isEditable} />
+    <textarea id='comment' name='comment' defaultValue={formik.values.comment} onChange={formik.handleChange} />
     <button className={formik.isValid ? classes.formIsValid : ''} type="submit">Отправить</button>
   </form>)
 
